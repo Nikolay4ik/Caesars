@@ -34,8 +34,7 @@ public class WorksFiles {
             }
         }
         if (Files.exists(pathName)) {
-            try {
-                OutputStream outputStream = Files.newOutputStream(pathName);
+            try(OutputStream outputStream = Files.newOutputStream(pathName)) {
                 for (String oneParse : arrayParse) {
                     outputStream.write(WorkCipher.cipher(oneParse).getBytes(StandardCharsets.UTF_8));
 
@@ -56,12 +55,9 @@ public class WorksFiles {
             }
         }
         if (Files.exists(pathName)) {
-            try {
-                OutputStream outputStream = Files.newOutputStream(pathName);
+            try(OutputStream outputStream = Files.newOutputStream(pathName)) {
                 for (String oneParse : arrayParse) {
                     outputStream.write(WorkCipher.bruteForce(oneParse).getBytes(StandardCharsets.UTF_8));
-
-
                 }
             } catch (IOException e) {
                 e.printStackTrace();

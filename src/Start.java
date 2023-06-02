@@ -8,9 +8,6 @@ import java.util.List;
 import java.util.Optional;
 
 public class Start {
-    private static int ROT;
-    private static final String SYMBOLS_ARRAY = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя.,\":-!? ";
-    private static final int MAX = SYMBOLS_ARRAY.length();
     private static final String NAME_PATH_RESULT = "FileTxt\\result.TXT";
     private static final String LOCALE_PATH_START = "FileTxt\\Test_One.TXT";
     private static final String LOCALE_PATH_DECOD = "FileTxt\\Test_Two.TXT";

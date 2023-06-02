@@ -21,7 +21,7 @@ public class WorkCipher {
         return stringBuilder.toString();
     }
    public static String bruteForce(String cipherText) {
-        StringBuilder stringBuilder1 = new StringBuilder();//сделать список стрингбилдеров
+        StringBuilder stringBuilder1 = new StringBuilder();
 
         char[] arraysCipherText = cipherText.toLowerCase().toCharArray();
         char[] textArrGoodString = WorkResources.SYMBOLS_ARRAY.toCharArray();
