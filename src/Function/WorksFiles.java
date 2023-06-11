@@ -1,3 +1,7 @@
+package Function;
+
+import Function.WorkCipher;
+
 import java.io.IOException;
 import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
@@ -7,6 +11,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class WorksFiles {
+   private WorkCipher workCipher;
+
+    public WorksFiles(WorkCipher workCipher) {
+        this.workCipher = workCipher;
+    }
+
+    public WorksFiles() {
+        workCipher= new WorkCipher();
+    }
+
     public static List<String> parse(String localePathStart) {
         List<String> stringsArraylocalePathStart = new ArrayList<>();
         Path pathlocalePathStart = Path.of(localePathStart);
@@ -24,7 +38,7 @@ public class WorksFiles {
     }
 
 
-    public static void createFileCipher(List<String> arrayParse, String namePath) {
+    public  void createFileCipher(List<String> arrayParse, String namePath) {
         Path pathName = Path.of(namePath);
         if (!Files.exists(pathName)) {
             try {
@@ -36,7 +50,7 @@ public class WorksFiles {
         if (Files.exists(pathName)) {
             try(OutputStream outputStream = Files.newOutputStream(pathName)) {
                 for (String oneParse : arrayParse) {
-                    outputStream.write(WorkCipher.cipher(oneParse).getBytes(StandardCharsets.UTF_8));
+                    outputStream.write(workCipher.cipher(oneParse).getBytes(StandardCharsets.UTF_8));
 
                 }
             } catch (IOException e) {

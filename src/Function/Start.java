@@ -1,11 +1,4 @@
-import java.io.IOException;
-import java.io.OutputStream;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+package Function;
 
 public class Start {
     private static final String NAME_PATH_RESULT = "FileTxt\\result.TXT";
@@ -14,12 +7,15 @@ public class Start {
 
     public Start() {
        WorkResources workResources= new WorkResources();
+       WorkCipher workCipher = new WorkCipher();
+       WorksFiles worksFiles= new WorksFiles();
        workResources.setStepsCode(6);
-       WorkCipher.сhoiceRot(workResources.getStepsCode());
+
+       workCipher.сhoiceRot(workResources.getStepsCode());
        workResources.setLocalePathStart(LOCALE_PATH_START);
        workResources.setNamePathResult(NAME_PATH_RESULT);
        workResources.setLocalePathDecod(LOCALE_PATH_DECOD);
-       WorksFiles.createFileCipher(WorksFiles.parse(workResources.getLocalePathStart()), workResources.getNamePathResult());
+       worksFiles.createFileCipher(WorksFiles.parse(workResources.getLocalePathStart()), workResources.getNamePathResult());
        WorksFiles.createFileDecoding(WorksFiles.parse(workResources.getNamePathResult()), workResources.getLocalePathDecod());
     }
 

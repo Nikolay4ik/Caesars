@@ -1,6 +1,13 @@
+package Function;
+
+import Function.ChoiceException;
+import Function.Rot;
+import Function.WorkResources;
+
 public class WorkCipher {
     private static int ROT;
-    public static String cipher(String text) {
+    public static WorkCipher WORK_CIPHER= new WorkCipher();
+    public  String cipher(String text) {
         StringBuilder stringBuilder = new StringBuilder();
         char[] textArrGoodString = WorkResources.SYMBOLS_ARRAY.toCharArray();
         char[] textArr = text.toLowerCase().toCharArray();
@@ -20,6 +27,8 @@ public class WorkCipher {
         stringBuilder.append(textArr);
         return stringBuilder.toString();
     }
+
+
    public static String bruteForce(String cipherText) {
         StringBuilder stringBuilder1 = new StringBuilder();
 
@@ -82,7 +91,7 @@ public class WorkCipher {
 
 
 
-    public static void сhoiceRot(int num) {
+    public  void сhoiceRot(int num) {
         if (num <= WorkResources.MAX) {
             switch (num) {
                 case 1:
@@ -112,8 +121,8 @@ public class WorkCipher {
             }
         } else {
             try {
-                throw new ExceptionnChoice();
-            } catch (ExceptionnChoice e) {
+                throw new ChoiceException();
+            } catch (ChoiceException e) {
                 e.printStackTrace();
             }
         }

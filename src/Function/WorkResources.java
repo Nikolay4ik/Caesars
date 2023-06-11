@@ -1,3 +1,5 @@
+package Function;
+
 public class WorkResources {
     private int stepsCode;
     public static String SYMBOLS_ARRAY = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя.,\":-!? ";
@@ -5,6 +7,7 @@ public class WorkResources {
     private String namePathResult; // "FileTxt\\result.TXT";
     private String localePathStart;// = "FileTxt\\Test_One.TXT";
     private String localePathDecod;// = "FileTxt\\Test_Two.TXT";
+    public static WorkResources WORK_RESOURCES=new WorkResources();
 
     public int getStepsCode() {
         return stepsCode;
