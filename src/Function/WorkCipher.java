@@ -1,9 +1,5 @@
 package Function;
 
-import Function.ChoiceException;
-import Function.Rot;
-import Function.WorkResources;
-
 public class WorkCipher {
     private static int ROT;
     public static WorkCipher WORK_CIPHER= new WorkCipher();
@@ -27,8 +23,6 @@ public class WorkCipher {
         stringBuilder.append(textArr);
         return stringBuilder.toString();
     }
-
-
    public static String bruteForce(String cipherText) {
         StringBuilder stringBuilder1 = new StringBuilder();
 
@@ -73,8 +67,6 @@ public class WorkCipher {
                             arraysCipherText[i] = textArrGoodString[j - 7];
                             stringBuilder1.append(arraysCipherText[i]);
                         }
-
-
                     } catch (ArrayIndexOutOfBoundsException e) {
                         break;
                     }
@@ -83,16 +75,10 @@ public class WorkCipher {
             }
 
         }
-
         return stringBuilder1.toString().replace('-',' ');
     }
-
-
-
-
-
     public  void сhoiceRot(int num) {
-        if (num <= WorkResources.MAX) {
+         if (num <= WorkResources.MAX) {
             switch (num) {
                 case 1:
                     ROT = Rot.ROT1.getRot();
@@ -117,15 +103,7 @@ public class WorkCipher {
                     break;
                 default:
                     System.out.println("Такого числа нет");
-
-            }
-        } else {
-            try {
-                throw new ChoiceException();
-            } catch (ChoiceException e) {
-                e.printStackTrace();
             }
         }
-
     }
 }

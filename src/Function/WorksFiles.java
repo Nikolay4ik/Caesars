@@ -12,6 +12,7 @@ import java.util.List;
 
 public class WorksFiles {
    private WorkCipher workCipher;
+   public static WorksFiles WORKS_FILES =new WorksFiles();
 
     public WorksFiles(WorkCipher workCipher) {
         this.workCipher = workCipher;
@@ -59,7 +60,7 @@ public class WorksFiles {
 
         }
     }
-    protected static void createFileDecoding(List<String> arrayParse, String namePath) {
+    public static void createFileDecoding(List<String> arrayParse, String namePath) {
         Path pathName = Path.of(namePath);
         if (!Files.exists(pathName)) {
             try {

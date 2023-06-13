@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="syntheticaGreenDream">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../Lib/V3/syntheticaGreenDream.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

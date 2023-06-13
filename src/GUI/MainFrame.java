@@ -5,24 +5,26 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+
 public class MainFrame extends JFrame {
     public static final int WIDTH = 700;
     public static final int HEIGHT = 350;
     private static final String PATH_TO_ICON = "images\\icon32x32.PNG";
     private static final String APPLICATION_NAME = "Caesar";
 
-
-    MainFrame() {
+    MainFrame(){
         super(APPLICATION_NAME);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new Dimension(WIDTH, HEIGHT));
         setLayout(new BorderLayout());
-        add(GuiResourse.centralPanel(),BorderLayout.CENTER);
+        add(GuiPageOne.centralPanel(), BorderLayout.CENTER);
         ImageIcon imageIcon = new ImageIcon(PATH_TO_ICON);
         setIconImage(imageIcon.getImage());
         setLocationRelativeTo(null);
         caesarIcon();
+
         pack();
+        setResizable(false);
         setVisible(true);
 
     }
@@ -40,7 +42,7 @@ public class MainFrame extends JFrame {
             }
         });
         popupMenu.add(item);
-        item=new MenuItem("Open");
+        item = new MenuItem("Open");
         item.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 setVisible(true);
@@ -48,7 +50,7 @@ public class MainFrame extends JFrame {
             }
         });
         popupMenu.add(item);
-        item=new MenuItem("Collapse");
+        item = new MenuItem("Collapse");
         item.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 setVisible(false);
@@ -68,6 +70,6 @@ public class MainFrame extends JFrame {
         } catch (AWTException e) {
             e.printStackTrace();
         }
-        trayIcon.displayMessage(APPLICATION_NAME, "Application started!", TrayIcon.MessageType.INFO);
+
     }
 }

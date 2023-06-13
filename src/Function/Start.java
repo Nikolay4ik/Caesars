@@ -19,10 +19,4 @@ public class Start {
        WorksFiles.createFileDecoding(WorksFiles.parse(workResources.getNamePathResult()), workResources.getLocalePathDecod());
     }
 
-    public static void main(String[] args) {
-        new Start();
-
-    }
-
-
 }
