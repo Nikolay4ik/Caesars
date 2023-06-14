@@ -28,6 +28,7 @@ public class WorksFiles {
         if (Files.exists(Path.of(localePathStart))) {
             try {
                 stringsArraylocalePathStart = Files.readAllLines(pathlocalePathStart);
+                stringsArraylocalePathStart.add(".");
             } catch (IOException e) {
                 e.printStackTrace();
             }
