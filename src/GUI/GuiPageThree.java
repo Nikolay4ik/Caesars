@@ -13,6 +13,7 @@ public class GuiPageThree {
     private static final JTextArea FILE_TEXT_LABEL_PANEL_DECODE = new JTextArea();
     private static File FILE_TXT_DECIPHER;
     private static final String NAME_PATH_SAVE_DECIPHER_FILE = "FileTxt\\";
+    private static final String PATH_TO_ICON = "images\\icon32x32.PNG";
 
     public static JPanel filesTextDecipher() {
         JPanel panelDecipher = new JPanel();
@@ -42,7 +43,7 @@ public class GuiPageThree {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JFileChooser fileChooser = new JFileChooser();
-                int ret = fileChooser.showDialog(null, "Выбрать файл");
+                int ret = fileChooser.showDialog(new MainFrame(PATH_TO_ICON), "Выбрать файл");
 
                 if (ret == JFileChooser.APPROVE_OPTION) {
                     FILE_TXT_DECIPHER = fileChooser.getSelectedFile();

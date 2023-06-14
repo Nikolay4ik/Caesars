@@ -12,11 +12,12 @@ import static Function.WorkCipher.WORK_CIPHER;
 import static Function.WorkResources.WORK_RESOURCES;
 import static Function.WorksFiles.WORKS_FILES;
 
+
 public class GuiPageTwo {
     private static final JTextArea FILE_TEXT_LABEL = new JTextArea();
     private static File FILE_TXT_CIPHER;
     private static final String NAME_PATH_SAVE_CIPHER_FILE = "FileTxt\\";
-
+    private static final String PATH_TO_ICON = "images\\icon32x32.PNG";
     public static JPanel filesTextCipher() {
         JPanel jPanel = new JPanel();
         jPanel.setLayout(new GridLayout(1, 2, 5, 12));
@@ -46,7 +47,7 @@ public class GuiPageTwo {
             @Override
             public void actionPerformed(ActionEvent e) {
                 JFileChooser fileChooser = new JFileChooser();
-                int ret = fileChooser.showDialog(null, "Выбрать файл");
+                int ret = fileChooser.showDialog(new MainFrame(PATH_TO_ICON), "Выбрать файл");
 
                 if (ret == JFileChooser.APPROVE_OPTION) {
                     FILE_TXT_CIPHER = fileChooser.getSelectedFile();

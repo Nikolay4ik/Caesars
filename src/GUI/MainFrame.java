@@ -12,6 +12,10 @@ public class MainFrame extends JFrame {
     private static final String PATH_TO_ICON = "images\\icon32x32.PNG";
     private static final String APPLICATION_NAME = "Caesar";
 
+    MainFrame(String image){
+        ImageIcon imageIcon = new ImageIcon(image);
+        setIconImage(imageIcon.getImage());
+    }
     MainFrame(){
         super(APPLICATION_NAME);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
