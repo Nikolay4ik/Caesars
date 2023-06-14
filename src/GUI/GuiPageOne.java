@@ -91,50 +91,50 @@ public class GuiPageOne {
         jPanel.setLayout(new BoxLayout(jPanel, BoxLayout.Y_AXIS));
         jPanel.setPreferredSize(new Dimension(250, 280));
         jPanel.setBackground(Color.WHITE);
-        JButton BUTTON_ROT_ONE = new JButton("Зашифровать текст-1");
-        BUTTON_ROT_ONE.addActionListener(new ActionListener() {
+        JButton buttonRotOne = new JButton("Зашифровать текст-1");
+        buttonRotOne.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                workCipherText(1);
             }
         });
-        JButton BUTTON_ROT_TWO = new JButton("Зашифровать текст-2");
-        BUTTON_ROT_TWO.addActionListener(new ActionListener() {
+        JButton buttonRotTwo = new JButton("Зашифровать текст-2");
+        buttonRotTwo.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
              workCipherText(2);
             }
         });
-        JButton BUTTON_ROT_THREE = new JButton("Зашифровать текст-3");
-        BUTTON_ROT_THREE.addActionListener(new ActionListener() {
+        JButton buttonRotThree = new JButton("Зашифровать текст-3");
+        buttonRotThree.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                workCipherText(3);
             }
         });
-        JButton BUTTON_ROT_FOUR = new JButton("Зашифровать текст-4");
-        BUTTON_ROT_FOUR.addActionListener(new ActionListener() {
+        JButton buttonRotFour = new JButton("Зашифровать текст-4");
+        buttonRotFour.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 workCipherText(4);
             }
         });
-        JButton BUTTON_ROT_FIVE = new JButton("Зашифровать текст-5");
-        BUTTON_ROT_FIVE.addActionListener(new ActionListener() {
+        JButton buttonRotFive = new JButton("Зашифровать текст-5");
+        buttonRotFive.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                workCipherText(5);
             }
         });
-        JButton BUTTON_ROT_SIX = new JButton("Зашифровать текст-6");
-        BUTTON_ROT_SIX.addActionListener(new ActionListener() {
+        JButton buttonRotSix = new JButton("Зашифровать текст-6");
+        buttonRotSix.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                workCipherText(6);
             }
         });
-        JButton BUTTON_ROT_SEVEN = new JButton("Зашифровать текст-7");
-        BUTTON_ROT_SEVEN.addActionListener(new ActionListener() {
+        JButton buttonRotSeven = new JButton("Зашифровать текст-7");
+        buttonRotSeven.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                workCipherText(7);
@@ -142,13 +142,13 @@ public class GuiPageOne {
 
             }
         });
-        jPanel.add(BUTTON_ROT_ONE);
-        jPanel.add(BUTTON_ROT_TWO);
-        jPanel.add(BUTTON_ROT_THREE);
-        jPanel.add(BUTTON_ROT_FOUR);
-        jPanel.add(BUTTON_ROT_FIVE);
-        jPanel.add(BUTTON_ROT_SIX);
-        jPanel.add(BUTTON_ROT_SEVEN);
+        jPanel.add(buttonRotOne);
+        jPanel.add(buttonRotTwo);
+        jPanel.add(buttonRotThree);
+        jPanel.add(buttonRotFour);
+        jPanel.add(buttonRotFive);
+        jPanel.add(buttonRotSix);
+        jPanel.add(buttonRotSeven);
         return jPanel;
     }
 private static void workCipherText(int step){

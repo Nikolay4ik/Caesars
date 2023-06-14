@@ -75,7 +75,9 @@ public class WorkCipher {
             }
 
         }
-        return stringBuilder1.toString().replace('-',' ');
+        return stringBuilder1.toString().replace('.',' ').replace(',',' ')
+                .replace('\"',' ').replace(':',' ')
+                .replace('-',' ').replace('!',' ').replace('?',' ');
     }
     public  void сhoiceRot(int num) {
          if (num <= WorkResources.MAX) {
